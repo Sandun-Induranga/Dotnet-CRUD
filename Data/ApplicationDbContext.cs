@@ -1,10 +1,12 @@
-namespace dotnet_crud.DbContexts
+namespace dotnet_crud.DbContexts;
+using Microsoft.EntityFrameworkCore;
+using dotnet_crud.Models;
+
+public class ApplicationDbContext : DbContext
 {
-    public class ApplicationDbContext : DbContext
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
-        {
-        }
-        public DbSet<Customer> Customers { get; set; }
     }
+    public DbSet<Customer> Customers { get; set; }
 }
+
