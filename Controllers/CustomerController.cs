@@ -37,5 +37,23 @@ public class CustomerController : Controller
         return View(customer);
     }
 
+    public IActionResult Edit(int id)
+    {
+        var customer = _db.Customers.Find(id);
+        return View(customer);
+    }
+
+    [HttpPut]
+    public IActionResult UpdateCustomer(Customer customer)
+    {
+        if (ModelState.IsValid)
+        {
+            _db.Customers.Update(customer);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        return View(customer);
+    }
+
 }
 
