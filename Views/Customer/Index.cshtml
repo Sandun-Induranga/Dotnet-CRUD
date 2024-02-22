@@ -1,5 +1,13 @@
+@model List<Customer>
+
 @{
     ViewData["Title"] = "Customers";
 }
 
 <h2>Customers</h2>
+
+<div class="row">
+    <div class="col-md-12">
+        <a asp-action="Create" class="btn btn-success" asp-controller="Customer">Add Customer</a>
+    </div>
+</div>
