@@ -20,5 +20,10 @@ public class CustomerController : Controller
         return View(customers);
     }
 
+    public IActionResult Create()
+    {
+        return View();
+    }
+
 }
 
