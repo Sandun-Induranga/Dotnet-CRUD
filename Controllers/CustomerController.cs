@@ -25,5 +25,17 @@ public class CustomerController : Controller
         return View();
     }
 
+    [HttpPost]
+    public IActionResult AddCustomer(Customer customer)
+    {
+        if (ModelState.IsValid)
+        {
+            _db.Customers.Add(customer);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        return View(customer);
+    }
+
 }
 
