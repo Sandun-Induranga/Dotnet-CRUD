@@ -48,68 +48,14 @@
                             @Html.DisplayFor(modelItem => customer.Salary)
                         </td>
                         <td>
-                            <a asp-action="Edit" asp-route-id="@customer.Id" class="btn btn-primary"
-                                asp-controller="Customer">Edit</a>
+                            <a asp-action="Edit" id="btnEdit" class="btn btn-primary" data-toggle="modal"
+                                data-target="#editModal">Edit</a>
                             <a asp-action="Details" asp-route-id="@customer.Id" class="btn btn-info"
                                 asp-controller="Customer">Details</a>
                             <a asp-action="Delete" asp-route-id="@customer.Id" class="btn btn-danger"
                                 asp-controller="Customer">Delete</a>
                         </td>
                     </tr>
-                    @* edit modal *@
-                    <div class="modal" id="editModal" tabindex="-1" role="dialog">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Edit Customer</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <form id="editForm">
-                                        <input type="hidden" id="Id" name="Id" />
-                                        <div class="form-group">
-                                            <label asp-for="@Html.DisplayFor(modelItem => customer.Id)"
-                                                class="control-label"></label>
-                                            <input asp-for="@Html.DisplayFor(modelItem => customer.Id)"
-                                                class="form-control" />
-                                            <span asp-validation-for="@Html.DisplayFor(modelItem => customer.Id)"
-                                                class="text-danger"></span>
-                                        </div>
-                                        <div class="form-group">
-                                            <label asp-for="@Html.DisplayFor(modelItem => customer.Name)"
-                                                class="control-label"></label>
-                                            <input asp-for="@Html.DisplayFor(modelItem => customer.Name)"
-                                                class="form-control" />
-                                            <span asp-validation-for="@Html.DisplayFor(modelItem => customer.Name)"
-                                                class="text-danger"></span>
-                                        </div>
-                                        <div class="form-group">
-                                            <label asp-for="@Html.DisplayFor(modelItem => customer.Address)"
-                                                class="control-label"></label>
-                                            <input asp-for="@Html.DisplayFor(modelItem => customer.Address)"
-                                                class="form-control" />
-                                            <span asp-validation-for="@Html.DisplayFor(modelItem => customer.Address)"
-                                                class="text-danger"></span>
-                                        </div>
-                                        <div class="form-group">
-                                            <label asp-for="@Html.DisplayFor(modelItem => customer.Salary)"
-                                                class="control-label"></label>
-                                            <input asp-for="@Html.DisplayFor(modelItem => customer.Salary)"
-                                                class="form-control" />
-                                            <span asp-validation-for="@Html.DisplayFor(modelItem => customer.Salary)"
-                                                class="text-danger"></span>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <input type="submit" value="Save" class="btn btn-primary" />
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 }
             </tbody>
         </table>
