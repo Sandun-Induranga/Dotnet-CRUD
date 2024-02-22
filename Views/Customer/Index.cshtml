@@ -11,3 +11,53 @@
         <a asp-action="Create" class="btn btn-success" asp-controller="Customer">Add Customer</a>
     </div>
 </div>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Id)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Address)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model[0].Salary)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var customer in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => customer.Id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => customer.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => customer.Address)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => customer.Salary)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@customer.Id" class="btn btn-primary"
+                                asp-controller="Customer">Edit</a>
+                            <a asp-action="Details" asp-route-id="@customer.Id" class="btn btn-info"
+                                asp-controller="Customer">Details</a>
+                            <a asp-action="Delete" asp-route-id="@customer.Id" class="btn btn-danger"
+                                asp-controller="Customer">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
