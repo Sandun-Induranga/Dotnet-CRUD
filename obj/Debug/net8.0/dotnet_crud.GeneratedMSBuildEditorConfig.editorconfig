@@ -18,8 +18,8 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /media/sandu/0559F5C021740317/GDSE/Project_Zone/VS_Projects/DOTNET/dotnet_crud
 build_property._RazorSourceGeneratorDebug = 
 
-[/media/sandu/0559F5C021740317/GDSE/Project_Zone/VS_Projects/DOTNET/dotnet_crud/Views/Home/Customer.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9DdXN0b21lci5jc2h0bWw=
+[/media/sandu/0559F5C021740317/GDSE/Project_Zone/VS_Projects/DOTNET/dotnet_crud/Views/Customer/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ3VzdG9tZXIvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/media/sandu/0559F5C021740317/GDSE/Project_Zone/VS_Projects/DOTNET/dotnet_crud/Views/Home/Index.cshtml]
