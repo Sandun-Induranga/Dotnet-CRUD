@@ -14,5 +14,11 @@ public class CustomerController : Controller
         _db = db;
     }
 
+    public IActionResult Index()
+    {
+        var customers = _db.Customers.ToList();
+        return View(customers);
+    }
+
 }
 
